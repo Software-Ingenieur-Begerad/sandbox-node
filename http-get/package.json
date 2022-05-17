@@ -1,0 +1,23 @@
+{
+    "private": true,
+    "name": "http-get",
+    "description": "HTTP GET request",
+    "version": "0.0.1",
+    "main": "index.js",
+    "author": "Software Ingenieur Begerad <dialog@SwIngBe.de>",
+    "license": "GPL-3.0-or-later",
+    "engines": {
+        "node": ">=10"
+    },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
