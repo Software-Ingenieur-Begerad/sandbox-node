@@ -28,6 +28,16 @@ async function run() {
 	let feedCount=0;
 	feed.entity.forEach(entity => {
 	    feedCount++;
+	    const vehiclePos = entity.vehicle;
+	    if (vehiclePos) {
+		const { trip, position, vehicle } = vehiclePos;
+		if (trip && position && vehicle) {
+		}else{
+		    debug('vehiclePos misses either trip, position or vehicle');
+		}
+	    }else{
+		debug('entity misses vehicle');
+	    }
 	});
 	debug('feedCount: '+feedCount);
     }else{
