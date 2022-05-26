@@ -1,0 +1,16 @@
+{
+    "private":true,
+    "name": "pbf",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Begerad",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+}
