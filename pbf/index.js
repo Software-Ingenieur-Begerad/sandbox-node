@@ -17,14 +17,19 @@ async function run() {
 	debug('buffer is instance of Buffer');
 	debug('read buffer and create pbf');
 	const pbf = new Pbf(buffer);
-	debug('create obj');
-	const obj = FeedMessage.read(pbf);
-	debug('use obj');
-	if(obj.header in obj){
-	    debug('obj has header');
+	debug('create feed');
+	const feed = FeedMessage.read(pbf);
+	debug('use feed');
+	if('header' in feed){
+	    debug('feed has header');
 	}else{
-	    debug('obj has header NOT');
+	    debug('feed has header NOT');
 	}
+	let feedCount=0;
+	feed.entity.forEach(entity => {
+	    feedCount++;
+	});
+	debug('feedCount: '+feedCount);
     }else{
 	debug('buffer is NOT instance of Buffer');
     }
