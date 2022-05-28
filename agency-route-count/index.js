@@ -16,17 +16,19 @@ async function run() {
     debug('run started...')
     const res = await axios.get(URL);
     debug('res: '+res);
+
+    let MapRoutes=null;
     if('data' in res){
 	/*get routes*/
 	const AryRoutes=res.data;
 	const RouteCount=AryRoutes.length;
 	debug('RouteCount: '+RouteCount);
 	/*create map*/
-	const MapRoutes=new Map();
+	MapRoutes=new Map();
 
 	/*interate through routes*/
-	//TODO for(var i=0;i<RouteCount;i++){
-	for(var i=0;i<20;i++){
+	for(var i=0;i<RouteCount;i++){
+	//TODO clean up for(var i=0;i<20;i++){
 	    debug('i: '+i);
 	    let agencyId=null;
 	    let routeId=null;
@@ -48,5 +50,7 @@ async function run() {
 	}
 	debug('MapRoutes size: '+MapRoutes.size);
     }
+    const objMap=Mapping.times2Obj(MapRoutes);
+    debug('objMap count: '+Object.keys(objMap).length);
     debug('run done.')
 }
