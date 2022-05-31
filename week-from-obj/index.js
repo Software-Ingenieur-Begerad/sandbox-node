@@ -35,7 +35,10 @@ async function run() {
 		let routeShortName=aryRoutes[i][1];
 		debug('routeShortName: ' + routeShortName);
 		if(routeShortName){
-		    routeService.getService(routeShortName);
+		    let aryTripsCount=[0,0,0,0,0,0,0];
+		    aryTripsCount=routeService.getTripsCountFromRoute(routeShortName,thisWeek);
+		    //TODO Why is aryTripsCount undefined?
+		    debug('aryTripsCount: '+aryTripsCount[0]);
 		}
 	    }
 	}

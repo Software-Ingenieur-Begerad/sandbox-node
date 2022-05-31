@@ -3,7 +3,7 @@ function getAryThisWeek(date){
     let dateIncrement=new Date(dateToday);
     const aryThisWeek=[];
     for(var i=0;i<7;i++){
-	aryThisWeek[i]=new Date(dateIncrement);
+	aryThisWeek[i]=new Date(new Date(dateIncrement).setHours(0, 0, 0, 0));
 	dateIncrement=new Date(dateIncrement.setDate(dateIncrement.getDate()+1));
     }
     return aryThisWeek;
