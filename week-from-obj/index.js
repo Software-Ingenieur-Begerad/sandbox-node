@@ -28,7 +28,9 @@ async function run() {
             let count = Object.keys(objRoutes).length;
             debug('objRoutes count: ' + count);
 	    let aryRoutes =Object.entries(objRoutes);
-	    for(var j=0;j<1;j++){
+	    let aryWeekTripsCount=[0,0,0,0,0,0,0];
+	    debug('aryWeekTripsCount.length: '+aryWeekTripsCount.length);
+	    for(var j=0;j<2;j++){
 		debug('j: '+j);
 		let routeId=aryRoutes[i][0];
 		debug('routeId: ' + routeId);
@@ -38,7 +40,10 @@ async function run() {
 		    let aryTripsCount=[0,0,0,0,0,0,0];
 		    aryTripsCount=routeService.getTripsCountFromRoute(routeShortName,thisWeek);
 		    //TODO Why is aryTripsCount undefined?
-		    debug('aryTripsCount: '+aryTripsCount[0]);
+		    debug('aryTripsCount len: '+aryTripsCount.length);
+		    for(var k=0;k<aryWeekTripsCount.length;k++){
+			aryWeekTripsCount[k]=aryWeekTripsCount[k]+aryTripsCount[k];
+		    }
 		}
 	    }
 	}

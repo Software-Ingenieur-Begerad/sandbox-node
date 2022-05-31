@@ -17,7 +17,7 @@ async function getTripsCountFromRoute(routeShortName,week) {
     debug('url: '+url);
     let aryTripsCount=[0,0,0,0,0,0,0];
     let resp={};
-    resp= await axios.get(url);
+    resp=await axios.get(url);
     if('data' in resp){
 	const objServiceDays=resp.data;
 	const aryServiceDays=Object.entries(objServiceDays);
@@ -31,7 +31,7 @@ async function getTripsCountFromRoute(routeShortName,week) {
 	    dateFromDay=new Date(new Date(dateFromDay).setHours(0, 0, 0, 0));
 	    //debug('dateFromDay: '+dateFromDay);
 	    if(dateFromDay.getTime()===week[0].getTime()){
-		debug('found date 0: '+dateFromDay);
+		//debug('found date 0: '+dateFromDay);
 		let trips=aryServiceDays[i][1];
 		    const aryTrip = Object.keys(trips);
 		const tripCount=aryTrip.length;
@@ -39,7 +39,7 @@ async function getTripsCountFromRoute(routeShortName,week) {
 		aryTripsCount[0]=tripCount;
 	    }
 	    else if(dateFromDay.getTime()===week[1].getTime()){
-		debug('found date 1: '+dateFromDay);
+		//debug('found date 1: '+dateFromDay);
 		let trips=aryServiceDays[i][1];
 		    const aryTrip = Object.keys(trips);
 		const tripCount=aryTrip.length;
@@ -47,7 +47,7 @@ async function getTripsCountFromRoute(routeShortName,week) {
 		aryTripsCount[1]=tripCount;
 	    }
 	    else if(dateFromDay.getTime()===week[2].getTime()){
-		debug('found date 2: '+dateFromDay);
+		//debug('found date 2: '+dateFromDay);
 		let trips=aryServiceDays[i][1];
 		    const aryTrip = Object.keys(trips);
 		const tripCount=aryTrip.length;
@@ -55,7 +55,7 @@ async function getTripsCountFromRoute(routeShortName,week) {
 		aryTripsCount[2]=tripCount;
 	    }
 	    else if(dateFromDay.getTime()===week[3].getTime()){
-		debug('found date 3: '+dateFromDay);
+		//debug('found date 3: '+dateFromDay);
 		let trips=aryServiceDays[i][1];
 		    const aryTrip = Object.keys(trips);
 		const tripCount=aryTrip.length;
@@ -63,7 +63,7 @@ async function getTripsCountFromRoute(routeShortName,week) {
 		aryTripsCount[3]=tripCount;
 	    }
 	    else if(dateFromDay.getTime()===week[4].getTime()){
-		debug('found date 4: '+dateFromDay);
+		//debug('found date 4: '+dateFromDay);
 		let trips=aryServiceDays[i][1];
 		    const aryTrip = Object.keys(trips);
 		const tripCount=aryTrip.length;
@@ -71,7 +71,7 @@ async function getTripsCountFromRoute(routeShortName,week) {
 		aryTripsCount[4]=tripCount;
 	    }
 	    else if(dateFromDay.getTime()===week[5].getTime()){
-		debug('found date 5: '+dateFromDay);
+		//debug('found date 5: '+dateFromDay);
 		let trips=aryServiceDays[i][1];
 		    const aryTrip = Object.keys(trips);
 		const tripCount=aryTrip.length;
@@ -79,7 +79,7 @@ async function getTripsCountFromRoute(routeShortName,week) {
 		aryTripsCount[5]=tripCount;
 	    }
 	    else if(dateFromDay.getTime()===week[6].getTime()){
-		debug('found date 6: '+dateFromDay);
+		//debug('found date 6: '+dateFromDay);
 		let trips=aryServiceDays[i][1];
 		    const aryTrip = Object.keys(trips);
 		const tripCount=aryTrip.length;
