@@ -1,8 +1,7 @@
 const http = require('http');
-require('dotenv').config();
 const DEBUG=require('debug')('http-get');
 
-const ADDR=process.env.ADDR;
+const ADDR='to be configured';
 DEBUG('ADDR: '+ADDR);
 let request = http.get(ADDR, (res) => {
     if (res.statusCode !== 200) {

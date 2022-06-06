@@ -1,10 +1,9 @@
-require('dotenv').config();
 const axios=require('axios');
 const debug=require('debug')('debug');
 const Count=require('./agency-route-count');
 const Mapping=require('./utils/mapping');
 
-const URL=process.env.URL;
+const URL='to be configured';
 debug('URL: '+URL)
 
 run().catch(err => {

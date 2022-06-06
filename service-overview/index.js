@@ -1,8 +1,7 @@
-require('dotenv').config();
 const Axios=require('axios');
 const Debug=require('debug')('debug');
 
-const URL=process.env.URL;
+const URL='to be configured';
 Debug('URL: '+URL)
 
 run().catch(err => {

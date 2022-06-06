@@ -1,9 +1,8 @@
-require('dotenv').config();
 const axios=require('axios');
 const debug=require('debug')('debug');
 const GtfsService=require('./gtfs-service');
 
-const URL=process.env.URL;
+const URL='to be configured';
 debug('URL: '+URL)
 
 run().catch(err => {

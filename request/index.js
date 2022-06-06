@@ -1,6 +1,5 @@
-require('dotenv').config();
 const debug=require('debug')('request');
-const url=process.env.URL||'to be configured using environment variable .env';
+const url='to be configured';
 debug('url: '+url)
 const fs = require('fs');
 const request = require('request');
