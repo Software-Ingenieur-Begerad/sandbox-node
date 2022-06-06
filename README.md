@@ -7,10 +7,13 @@
 This is the sandbox for projects using node.js.
 
 * [agency-route-count](./ageny-route-count)
-* [http-get](./http-get)
 * [ary-this-week](./ary-this-week)
+* [compare-files](./compare-files)
+* [file-stat](./file-stat)
 * [gtfs-service](./gtfs-service)
+* [http-get](./http-get)
 * [pbf](./pbf)
 * [request](./request)
 * [service-overview](./service-overview)
+* [unzipper](./unzipper)
 * [week-from-obj](./week-from-obj)
