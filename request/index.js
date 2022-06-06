@@ -1,8 +1,8 @@
-const debug=require('debug')('request');
-const url='to be configured';
+const debug=require('debug')('debug');
+const dload=require('./dload');
+const url='http://www.connect-info.net/opendata/gtfs/connect-nds-toplevel-dhid/pxypihdrpv';
 debug('url: '+url)
-const fs = require('fs');
-const request = require('request');
-const dest='connect-top-dhid.zip';
-request(url).pipe(fs.createWriteStream(dest));
+const dest='connect-top-dhid';
+debug('dest: '+dest);
+dload.dloadFile(url,dest);
 debug('done.');

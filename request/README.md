@@ -9,7 +9,7 @@ npm i
 ## Development setup
 Run the following command in your favorite terminal if you fancy log messages for debugging.
 ```
-export DEBUG=$DEBUG,request
+export DEBUG=$DEBUG,debug
 ```
 Run the following command in your favorite terminal to start the service in development mode.
 ```
