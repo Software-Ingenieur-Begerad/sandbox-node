@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "file-last-modified",
+    "name": "file-stat",
     "version": "0.0.1",
     "description": "",
     "main": "index.js",
