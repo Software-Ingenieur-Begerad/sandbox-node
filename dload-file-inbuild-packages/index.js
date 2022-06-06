@@ -23,19 +23,20 @@ const fs = require('fs');
  * enable HTTP requests
  */
 const http = require('http');
-  
-/*
- * send HTTP GET request
- */  
+
+debug('process.cwd(): '+process.cwd());
+//__dirname is an env variable that tells you the absolute path of the directory containing the currently executing file
+debug('__dirname: '+__dirname);
+
+//send HTTP GET request
 http.get(URL,(res) => {
-    /*
-     * image will be stored at this place
-     */
-    const path = `${__dirname}/dload`; 
+    const path = `${__dirname}/dload`;
+    debug('path: '+path);
+    //create file
     const filePath = fs.createWriteStream(path);
     res.pipe(filePath);
     filePath.on('finish',() => {
         filePath.close();
-        console.log('Download Completed'); 
+        console.log('download Completed');
     })
 })
