@@ -4,7 +4,7 @@
 0. [General](#General)
 
 # General
-This is the sandbox for projects using node.js.
+This is a sandbox for projects using node.js.
 
 * [agency-route-count](./ageny-route-count)
 * [ary-this-week](./ary-this-week)
