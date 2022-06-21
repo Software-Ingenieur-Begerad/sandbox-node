@@ -11,10 +11,10 @@
     "author": "Stefan Begerad",
     "license": "GPL-3.0",
     "devDependencies": {
-        "nodemon": "^2.0.7"
+        "nodemon": "2.0.16"
     },
     "dependencies": {
-        "fs": "^0.0.1-security",
-        "pbf": "^3.2.1"
+        "fs": "0.0.1-security",
+        "pbf": "3.2.1"
     }
 }
