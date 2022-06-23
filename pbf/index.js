@@ -1,5 +1,5 @@
 const fs = require('fs');
-const debug=require('debug')('pbf');
+const debug=require('debug')('debug');
 const gtfsRt=require('../../proto2js/js/gtfs-rt.js');
 const Pbf = require('pbf');
 
@@ -12,7 +12,7 @@ async function run() {
     debug('run started...');
     const FeedMessage = gtfsRt.FeedMessage;
     debug('read gtfs-rt feed from file');
-    const buffer=fs.readFileSync('/tmp/gtfsr_connect.bin');
+    const buffer=fs.readFileSync('/tmp/vbn/gtfsr_connect.bin');
     if(buffer instanceof Buffer){
 	debug('buffer is instance of Buffer');
 	debug('read buffer and create pbf');

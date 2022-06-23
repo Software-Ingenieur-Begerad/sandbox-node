@@ -12,6 +12,11 @@
 	{
 	    "matchDepTypes": ["devDependencies"],
 	    "automerge": true
+	},
+	{
+	    "matchingUpdateTypes": ["minor","patch"],
+	    "matchCurrentVersion": "!/^0/",
+	    "automerge": true
 	}
     ]
 }
