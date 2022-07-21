@@ -11,6 +11,6 @@
   "author": "Stefan Begerad",
   "license": "GPL-3.0",
   "devDependencies": {
-    "nodemon": "2.0.18"
+    "nodemon": "2.0.19"
   }
 }
